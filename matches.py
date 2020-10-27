@@ -6,11 +6,16 @@
 тот, кто забирает последнюю спичку - проиграл
 """
 import random
-
+player_number = 1
 n = random.randint(10, 40)
 while n > 0:
     print('На столе осталось', n, 'спичек.')
+    print('Сейчас ходит игрок номер ', player_number)
     print('Введите следующее число.')
     a = int(input())
     n = n - a
-print('Вы проиграли.')
+    if player_number == 1:
+        player_number = 2
+    else:
+        player_number = 1
+print('Выиграл игрок номер', player_number)
