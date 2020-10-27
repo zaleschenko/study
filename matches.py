@@ -13,6 +13,9 @@ while n > 0:
     print('Сейчас ходит игрок номер ', player_number)
     print('Введите следующее число.')
     a = int(input())
+    while a < 1 or a > 5:
+        print('Пожалуйста, введите корректное чисто спичек! ')
+        a = int(input())
     n = n - a
     if player_number == 1:
         player_number = 2
